@@ -7,7 +7,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to your image
-image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\poa.png'
+image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\Designer.jpeg'
 base64_image = get_base64_image(image_path)
 
 # Set page configuration
@@ -36,6 +36,7 @@ st.markdown(f"""
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-color: #fff;
         }}
         .centered-text {{
             font-size: 48px;
@@ -48,7 +49,7 @@ st.markdown(f"""
         }}
         .button-play {{
             margin-top: 20px;
-            background-color: #333;
+            background-color: #60af32;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -63,7 +64,7 @@ st.markdown(f"""
         }}
         .feature-box {{
             text-align: center;
-            background-color: #f0f0f0;
+            background-color:#32E673;
             color: #333;
             border-radius: 10px;
             padding: 20px;
@@ -357,3 +358,81 @@ st.markdown("""
         <button class="button">Get Started for Free</button>
     </div>
 """.format(reservation_fee=reservation_fee), unsafe_allow_html=True)
+
+import streamlit as st
+
+# Custom CSS for footer styling
+st.markdown("""
+    <style>
+    .footer {
+        color: white;
+        padding: 20px;
+        text-align: left;
+        bottom: 0;
+        width: 100%;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column {
+        margin-right: 30px;
+    }
+    .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 5px 0;
+        display: block;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    .social-icons img {
+        width: 24px;
+        margin-right: 10px;
+    }
+    </style>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>LITSpectra</h4>
+                <p>LITSpectra is a Digital Solar Platform that enables users to reserve solar from community solar projects to offset their power bills.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/discord.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"/></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Digital Solar</h3>
+                <a href="#">Community Solar Projects</a>
+                <a href="#">How it Works</a>
+                <a href="#">What's New</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">EV Charging</a>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <a href="#">Community</a>
+                <a href="#">Join Webinar</a>
+                <a href="#">Newsletter</a>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Newsroom</a>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <a href="#">Write to Us</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>© SundayGrids, 2024. All rights reserved.</p>
+            <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
