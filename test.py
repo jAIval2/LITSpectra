@@ -7,10 +7,10 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Paths to your images
-background_image_path = r'Designer.jpeg'
-step1_image_path = 'a.jpeg'
-step2_image_path = 'b.jpeg'
-step3_image_path = 'c.jpeg'
+background_image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\Designer.jpeg'
+step1_image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\a.jpeg'
+step2_image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\b.jpeg'
+step3_image_path = r'C:\Users\sonal\PycharmProjects\LITSpectra\c.jpeg'
 
 background_base64_image = get_base64_image(background_image_path)
 step1_base64_image = get_base64_image(step1_image_path)
